@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>my-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>my-project</name>
+    <url>https://example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <!-- TODO: update to latest version -->
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <dependencies.junit.version>5.10.2</dependencies.junit.version>
+
+        <!-- TODO: update to latest version -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+        <dependencies.jfx.version>22</dependencies.jfx.version>
+    </properties>
+
+
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-maven-plugin -->
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>javafx-maven-plugin</artifactId>
+                    <version>0.0.8</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>0.8.12</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.3.1</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.13.0</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.2.5</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.4.0</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
+                    <artifactId>maven-install-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.1.1</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.1.1</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+                    <artifactId>maven-site-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.12.1</version>
+                </plugin>
+                <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-project-info-reports-plugin -->
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <!-- TODO: update to latest version -->
+                    <version>3.5.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <!-- TODO: update to latest version -->
+            <version>3.1.0</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <!-- TODO: update to latest version -->
+            <version>6.4.0.Final</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <!-- TODO: update to latest version -->
+            <version>8.2.0</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${dependencies.junit.version}</version>
+            <scope>test</scope>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${dependencies.junit.version}</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${dependencies.junit.version}</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-swing -->
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>${dependencies.jfx.version}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+</project>
