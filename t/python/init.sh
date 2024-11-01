@@ -42,6 +42,7 @@ echo "# Reminders"
 echo "* Search for 'TODO' in the project and update the configuration according to your project."
 echo "* New project defaults to MIT license, make sure this is okay for the project."
 echo "* Python modules should use short, lowercase names for modules, preferably without underscores (PEP8)."
+echo "* Checkout GitHub Workflow templates: https://4mbl.link/gist/github-actions."
 echo ""
 
 cd $prev_cwd
