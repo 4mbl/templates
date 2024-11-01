@@ -15,11 +15,11 @@ Alternatively you can directly select the language on the URL.
 ### Python
 
 ```text
-curl -sL https://4mbl.link/init/python | sh
+curl -sL https://init.4mbl.net/python | bash -s <name>
 ```
 
 ### Java (Maven)
 
 ```text
-curl -sL https://4mbl.link/init/java | sh
+curl -sL https://init.4mbl.net/java | bash -s <name>
 ```
