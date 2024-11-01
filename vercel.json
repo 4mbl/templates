@@ -7,7 +7,7 @@
     },
     {
       "source": "/:lang",
-      "destination": "/:lang/init.sh"
+      "destination": "/t/:lang/init.sh"
     }
   ]
 }
