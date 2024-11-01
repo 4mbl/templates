@@ -4,6 +4,10 @@
     {
       "source": "/",
       "destination": "/init.sh"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/$1/init.sh"
     }
   ]
 }
