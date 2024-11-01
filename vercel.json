@@ -8,6 +8,10 @@
     {
       "source": "/:lang",
       "destination": "/t/:lang/init.sh"
+    },
+    {
+      "source": "/go",
+      "destination": "/t/golang/init.sh"
     }
   ]
 }
