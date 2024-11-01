@@ -6,7 +6,7 @@
       "destination": "/init.sh"
     },
     {
-      "source": "/:lang*",
+      "source": "/:lang",
       "destination": "/:lang/init.sh"
     }
   ]
